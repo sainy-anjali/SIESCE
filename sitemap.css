@@ -1,0 +1,115 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .sitemap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Root Boxes */
+    .box {
+      background: #ffe066;
+      border: 2px solid #e0b800;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 10px auto;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .home-box {
+      background: #e0b800;
+      border: 2px solid #f08a24;
+    }
+
+    /* Connector line from Website to Home */
+    .website::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      background: #444;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .home-box::after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background: #444;
+      bottom: -40px;
+      left: 10%;
+    }
+
+    /* Main sections row */
+    .main-sections {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .section {
+      text-align: left;
+      flex: 1;
+      margin: 0 10px;
+      position: relative;
+    }
+
+    .section-title {
+      background: #ffe066;
+      border: 2px solid #e0b800;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-title:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      background: #f9c74f;
+    }
+
+    /* Vertical child items */
+    .children {
+      border-left: 2px solid #444;
+      margin: 10px auto 0;
+      padding-left: 15px;
+    }
+
+    .children div {
+      font-size: 14px;
+      margin: 5px 0;
+      position: relative;
+    }
+
+    .children div::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      background: #444;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
